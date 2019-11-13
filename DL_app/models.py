@@ -15,3 +15,6 @@ class News(models.Model):
     news_title = models.TextField()
     news_content = models.TextField()
     news_date = models.DateTimeField('date')
+
+    def dataminthyear(self):
+        return self.news_date.strftime('%d %B')

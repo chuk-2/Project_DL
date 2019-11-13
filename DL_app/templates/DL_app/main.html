@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Main</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'DL_app/css/unauthorized_user_main.css' %}">
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-light bg-white">
+        <a class="navbar-brand" href="{% url 'DL_app:main'%}"><h2 class="my-0">DL</h2></a>
+        <form class="form-inline">
+            <a class="btn btn btn-outline-primary my-2 my-md-0 rounded-0 button_h35_w110" href="{% url 'DL_app:login'%}">Войти</a>
+        </form>
+    </nav>
+
+    <hr class="hr_mt0_mb0">
+
+    <div class="row mt-md-3">
+        <div class="col-md-2">
+            <div class="card w-100 shadow-sm mb-md-3">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">Важные объявления</h6>
+                    <hr>
+                    <ol class="list-unstyled">
+                        <li><a class="text-decoration-none text_fs14" href="login.html">Расписание летнего семестра</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Пересдача</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Ритейк</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">HackDay</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Хакатон</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="card w-100 shadow-sm mb-md-3">
+                <div class="card-body">
+                    <h6 class="card-title font-weight-bold">Преподавателям</h6>
+                    <hr>
+                    <ol class="list-unstyled">
+                        <li><a class="text-decoration-none text_fs14" href="#">Порядок подготовки и проведения экзам.сессии</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Система оценивания</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">План первого семестра</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №890</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №55</a></li>
+                    </ol>
+                    <h6 class="card-title font-weight-bold mt-md-5">Студентам</h6>
+                    <hr>
+                    <ol class="list-unstyled">
+                        <li><a class="text-decoration-none text_fs14" href="#">Приказ о проведении экзаменационной сессии</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Расписание звонков</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №202</a></li>
+                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №101</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            {% for news in all_news %}
+            <div class="card w-100 shadow-sm mb-md-3">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">{{news.news_title}}</h4>
+                    <div class="mb-md-4 text-muted">
+                       {{news.dataminthyear}}, автор <em>{{news.news_author}}</em>
+                    </div>
+                    <p class="card-text">{{news.news_content}}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="card w-100 shadow-sm mb-md-3">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">В ноябре подписчики PS Plus получат Outlast 2 и Nioh</h4>
+                    <div class="mb-md-4 text-muted">
+                        30 Октября, автор <em>Михаил Лермонтов</em>
+                    </div>
+                    <p class="card-text">Nioh — экшн-RPG от студии Team Ninja, действие которой разворачивается в Японии периода Сэнгоку. Главный герой игры, английский мореплаватель Уильям Адамс, прибывает в страну и участвует в междоусобной войне, в которой сражаются как самураи, так и демоны-ёкаи.</p>
+                    <p class="card-text">Outlast 2 — продолжение хоррора в стилистике found footage, в котором главный герой, журналист Блейк Лангерманн, противостоит религиозным фанатикам.</p>
+                </div>
+            </div>
+            <div class="card w-100 shadow-sm mb-md-3">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Началась предзагрузка ПК-версии Red Dead Redemption 2</h4>
+                    <div class="mb-md-4 text-muted">
+                        29 Октября, автор <em>Лев Толстой</em>
+                    </div>
+                    <p class="card-text">Для установки нужно скачать 109 гигабайтов.</p>
+                    <p class="card-text">Игроки, оформившие предзаказ на игру, обратили внимание, что в Rockstar Games Launcher стартовала предзагрузка — клиент для установки весит 109,47 гигабайта.</p>
+                    <p class="card-text">Полноценная игра, судя по системным требованиям, займёт на диске несколько больше — около 150 ГБ.</p>
+                    <p class="card-text">Релиз RDR 2 на ПК состоится 5 ноября в магазине Rockstar и Epic Games Store. В Steam игра выйдет позже — лишь в декабре.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-md-5 mb-md-1 text-md-center position-sticky">
+        <hr>
+        <p>© 2019 Company, Inc.</p>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
