@@ -6,7 +6,8 @@ app_name = "DL_app"
 
 urlpatterns = [
     path('', views.main, name='main'),
-    #path('/login/', views.login, name='login'),
     path('student_user/', views.student_user, name='student_user'),
+    path('student_attendance/<int:course_id>/', views.student_attendance, name='student_attendance'),
+    path('student_scores/<int:course_id>/', views.student_scores, name='student_scores'),
     path('login', auth_login, name="login"),
 ]

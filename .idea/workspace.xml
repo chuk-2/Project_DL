@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd9ac10-fcea-4905-8256-78a4942352c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/attendance_student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/score_student.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/attendance_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/attendance_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/score_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/score_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_DL/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_DL/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

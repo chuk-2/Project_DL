@@ -49,8 +49,8 @@
                     <a href="#" class="card-link">Перейти к курсу</a>
                 </div>
                 <div class="float-right">
-                    <a href="#" class="card-link">Оценки</a>
-                    <a href="#" class="card-link">Посещаемость</a>
+                    <a href="{% url 'DL_app:student_scores' course.course_id%}" class="card-link">Оценки</a>
+                    <a href="{% url 'DL_app:student_attendance' course.course_id%}" class="card-link">Посещаемость</a>
                 </div>
             </div>
         </div>

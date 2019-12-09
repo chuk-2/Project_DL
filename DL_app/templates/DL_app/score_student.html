@@ -1,177 +1,95 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{%extends "DL_app/layout.html" %}
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/score_student.css">
+{%block content%}
+<div class="card w-100 mb-md-3 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title font-weight-bold mb-md-3">Оценки ( {{ course.course_name }} ) :</h4>
 
-    <title>Score</title>
-</head>
-<body>
-<div class="container-fluid">
-    <nav class="navbar navbar-light bg-white">
-        <a class="navbar-brand" href="#"><h2 class="my-0">DL</h2></a>
-        <form class="form-inline">
-            <div class="dropdown">
-                <a class="dropdown-toggle text-decoration-none" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dobrelya Ruslan
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-right text-md-center text_fs15" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Профиль</a>
-                    <a class="dropdown-item" href="#">Оценки</a>
-                    <a class="dropdown-item" href="#">Посещаемость</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Выйти</a>
-                </div>
-            </div>
-        </form>
-    </nav>
-
-    <hr class="hr_mt0_mb0">
-
-    <div class="row mt-md-3">
-        <div class="col-md-2">
-            <div class="card w-100 shadow-sm mb-md-3">
-                <div class="card-body">
-                    <h6 class="card-title font-weight-bold">Важные объявления</h6>
-                    <hr>
-                    <ol class="list-unstyled">
-                        <li><a class="text-decoration-none text_fs14" href="#">Расписание летнего семестра</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Персдача</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Ритейк</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">HackDay</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Хакатон</a></li>
-                    </ol>
-                </div>
-            </div>
-            <div class="card w-100 shadow-sm mb-md-3">
-                <div class="card-body">
-                    <h6 class="card-title font-weight-bold">Преподавателям</h6>
-                    <hr>
-                    <ol class="list-unstyled">
-                        <li><a class="text-decoration-none text_fs14" href="#">Порядок подготовки и проведения экзам.сессии</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Система оценивания</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">План первого семестра</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №890</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №55</a></li>
-                    </ol>
-                    <h6 class="card-title font-weight-bold mt-md-5">Студентам</h6>
-                    <hr>
-                    <ol class="list-unstyled">
-                        <li><a class="text-decoration-none text_fs14" href="#">Приказ о проведении экзаменационной сессии</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Расписание звонков</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №202</a></li>
-                        <li><a class="text-decoration-none text_fs14" href="#">Приказ №101</a></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-10">
-            <div class="card w-100 mb-md-3 shadow-sm">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold mb-md-3">Оценки ( Теория Вероятности и Математическая Статистика ) :</h4>
-
-                    <table class="table mt-3">
-                        <caption>РК средняя : 90,9% (A)<br>Итог Ведомости : 84,9 (B)</caption>
-                        <thead class="thead-light">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Задание</th>
-                            <th class="text-md-center" scope="col">Процент</th>
-                            <th class="text-md-center" scope="col">Оценка</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Data Types</td>
-                            <td class="text-md-center">97%</td>
-                            <td class="text-md-center">A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Loops</td>
-                            <td class="text-md-center">98%</td>
-                            <td class="text-md-center">A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Functions</td>
-                            <td class="text-md-center">82%</td>
-                            <td class="text-md-center">-B</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Data types & Data manipulation</td>
-                            <td class="text-md-center">92%</td>
-                            <td class="text-md-center">-A</td>
-                        </tr>
-                        <tr class="font-weight-bold">
-                            <th scope="row"></th>
-                            <td>РК - 1</td>
-                            <td class="text-md-center">85%</td>
-                            <td class="text-md-center">B</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Additions & Files</td>
-                            <td class="text-md-center">82%</td>
-                            <td class="text-md-center">-B</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Classes</td>
-                            <td class="text-md-center">50%</td>
-                            <td class="text-md-center">F</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">7</th>
-                            <td>Databases</td>
-                            <td class="text-md-center">95%</td>
-                            <td class="text-md-center">A</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">8</th>
-                            <td>Project</td>
-                            <td class="text-md-center">95%</td>
-                            <td class="text-md-center">A</td>
-                        </tr>
-                        <tr class="font-weight-bold">
-                            <th scope="row"></th>
-                            <td>РК - 2</td>
-                            <td class="text-md-center">75%</td>
-                            <td class="text-md-center">-B</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="table-primary font-weight-bold">
-                            <th scope="row"></th>
-                            <td>Финальный Экзамен</td>
-                            <td class="text-md-center">96%</td>
-                            <td class="text-md-center">A</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+        <table class="table mt-3">
+            <caption>РК средняя : 90,9% (A)<br>Итог Ведомости : 84,9 (B)</caption>
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Задание</th>
+                <th class="text-md-center" scope="col">Процент</th>
+                <th class="text-md-center" scope="col">Оценка</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Data Types</td>
+                <td class="text-md-center">97%</td>
+                <td class="text-md-center">A</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Loops</td>
+                <td class="text-md-center">98%</td>
+                <td class="text-md-center">A</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Functions</td>
+                <td class="text-md-center">82%</td>
+                <td class="text-md-center">-B</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Data types & Data manipulation</td>
+                <td class="text-md-center">92%</td>
+                <td class="text-md-center">-A</td>
+            </tr>
+            <tr class="font-weight-bold">
+                <th scope="row"></th>
+                <td>РК - 1</td>
+                <td class="text-md-center">85%</td>
+                <td class="text-md-center">B</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Additions & Files</td>
+                <td class="text-md-center">82%</td>
+                <td class="text-md-center">-B</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Classes</td>
+                <td class="text-md-center">50%</td>
+                <td class="text-md-center">F</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Databases</td>
+                <td class="text-md-center">95%</td>
+                <td class="text-md-center">A</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>Project</td>
+                <td class="text-md-center">95%</td>
+                <td class="text-md-center">A</td>
+            </tr>
+            <tr class="font-weight-bold">
+                <th scope="row"></th>
+                <td>РК - 2</td>
+                <td class="text-md-center">75%</td>
+                <td class="text-md-center">-B</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table-primary font-weight-bold">
+                <th scope="row"></th>
+                <td>Финальный Экзамен</td>
+                <td class="text-md-center">96%</td>
+                <td class="text-md-center">A</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
-
-<footer class="mt-md-5 mb-md-1 text-md-center container-fluid">
-    <hr>
-    <p>© 2019 Company, Inc.</p>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
+{%endblock%}

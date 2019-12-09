@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import *
 from django.http import HttpResponse
 
@@ -16,3 +16,13 @@ def login(request):
 def student_user(request):
     all_course = Course.objects.order_by('-course_id')
     return render(request, "DL_app/courses.html", {'all_course': all_course})
+
+
+def student_attendance(request, course_id):
+    course_art = get_object_or_404(Course, pk=course_id)
+    return render(request, "DL_app/attendance_student.html", {"course": course_art})
+
+
+def student_scores(request, course_id):
+    course_art = get_object_or_404(Course, pk=course_id)
+    return render(request, "DL_app/score_student.html", {"course": course_art})
