@@ -1,0 +1,61 @@
+{%extends "DL_app/layout.html" %}
+
+{%block content%}
+<div class="row">
+    <div class="col-md-10">
+        <div class="card w-100 h-100 shadow-sm ">
+            <div class="card-header h5">
+                Студент
+            </div>
+            <div class="card-body">
+                <div class="float-md-left">
+                    <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                    <h6 class="card-subtitle text-muted">Имя</h6>
+                </div>
+                <div class="ml-md-5 float-md-left">
+                    <h5 class="card-title">{{user.user_group}}</h5>
+                    <h6 class="card-subtitle text-muted">Группа</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-2">
+        <div class="card w-100 h-100 shadow-sm text-center">
+            <div class="card-header h5">
+                GPA
+            </div>
+            <div class="card-body">
+                <p class="card-text mt-md-2 h4">4</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card w-100 mt-md-3 mb-md-3 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title font-weight-bold">Курсы Семестра - 1 :</h4>
+        <h6 class="card-subtitle mb-md-4 font-weight-bold">2018/2019</h6>
+
+        {% for course in all_course %}
+        <div class="card w-100 mb-md-3">
+            <div class="card-body">
+                <h5 class="card-title">{{course.course_name}}</h5>
+                <h6 class="card-subtitle text-muted">Преподаватель <em>{{course.course_teacher}}</em></h6>
+                <hr>
+                <div class="float-left">
+                    <a href="#" class="card-link">Перейти к курсу</a>
+                </div>
+                <div class="float-right">
+                    <a href="#" class="card-link">Оценки</a>
+                    <a href="#" class="card-link">Посещаемость</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+!
+    </div>
+</div>
+{%endblock%}
