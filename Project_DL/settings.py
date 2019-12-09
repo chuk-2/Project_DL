@@ -100,6 +100,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'DL_app.SimpleUser'
+LOGIN_REDIRECT_URL = 'DL_app:student_user'
+LOGOUT_REDIRECT_URL = 'DL_app:main'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
