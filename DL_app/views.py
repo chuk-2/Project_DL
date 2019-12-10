@@ -13,7 +13,7 @@ def login(request):
     return render(request, "DL_app/login.html")
 
 
-def student_user(request):
+def courses(request):
     all_course = Course.objects.order_by('-course_id')
     return render(request, "DL_app/courses.html", {'all_course': all_course})
 

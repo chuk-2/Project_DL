@@ -29,7 +29,7 @@ class News(models.Model):
     news_content = models.TextField()
     news_date = models.DateTimeField('date')
 
-    def dataminthyear(self):
+    def datemonth(self):
         return self.news_date.strftime('%d %B')
 
 

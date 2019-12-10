@@ -101,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'DL_app.SimpleUser'
-LOGIN_REDIRECT_URL = 'DL_app:user_courses'
+LOGIN_REDIRECT_URL = 'DL_app:courses'
 LOGOUT_REDIRECT_URL = 'DL_app:main'
 
 # Internationalization

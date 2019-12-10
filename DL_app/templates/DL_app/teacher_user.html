@@ -1,0 +1,317 @@
+{%extends "DL_app/layout.html" %}
+
+{%block content%}
+<div class="row mt-md-3">
+    <div class="col-md-10">
+        <div class="card w-100 mb-md-3 shadow-sm ">
+            <div class="card-header h5">
+                Преподаватель
+            </div>
+            <div class="card-body">
+                <div class="float-md-left">
+                    <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                    <h6 class="card-subtitle text-muted">Имя</h6>
+                </div>
+                <div class="ml-md-5 float-md-left">
+                    <h5 class="card-title">{{user.user_group}}</h5>
+                    <h6 class="card-subtitle text-muted">Кафедра</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="card w-100 mb-md-3 shadow-sm">
+            <div class="card-body">
+                <h4 class="card-title font-weight-bold mb-md-3">Мои курсы :</h4>
+
+                <div class="card w-100 mb-md-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Теория Вероятности и Математическая Статистика</h5>
+                        <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
+                        <hr>
+                        <div class="float-left mt-md-1">
+                            <a href="#" class="card-link">Перейти к курсу</a>
+                        </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 mb-md-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Дискретная Математика</h5>
+                        <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
+                        <hr>
+                        <div class="float-left">
+                            <a href="#" class="card-link">Перейти к курсу</a>
+                        </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 mb-md-3">
+                    <div class="card-body">
+                        <h5 class="card-title">C#</h5>
+                        <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
+                        <hr>
+                        <div class="float-left">
+                            <a href="#" class="card-link">Перейти к курсу</a>
+                        </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 mb-md-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Java</h5>
+                        <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
+                        <hr>
+                        <div class="float-left">
+                            <a href="#" class="card-link">Перейти к курсу</a>
+                        </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 mb-md-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Английский Язык</h5>
+                        <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
+                        <hr>
+                        <div class="float-left">
+                            <a href="#" class="card-link">Перейти к курсу</a>
+                        </div>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                            <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="attendance" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabelAttendance">Посещаемость</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="GroupsAttendance" class="col-form-label">Группа :</label>
+                        <select class="custom-select custom-select-sm" id="GroupsAttendance" required>
+                            <option value="">CSSE 1815</option>
+                            <option value="">CSSE 1814</option>
+                            <option value="">CSSE 1813</option>
+                            <option value="">IS 1802</option>
+                            <option value="">IS 1801</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="datetime" class="col-form-label">Дата :</label>
+                        <input type="date" class="form-control form-control-sm" id="datetime" required>
+                    </div>
+
+                    <table class="table mt-md-5">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Фамилия</th>
+                            <th scope="col">Имя</th>
+                            <th class="text-md-center" scope="col">Присутствие</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Ахмешев</td>
+                            <td>Ринат</td>
+                            <td class="text-md-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="CheckAttendance1" required>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Муссин</td>
+                            <td>Муса</td>
+                            <td class="text-md-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="CheckAttendance2" required>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Амир</td>
+                            <td>Карина</td>
+                            <td class="text-md-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="CheckAttendance3" required>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm rounded-0 btn-outline-secondary" data-dismiss="modal">Отмена</button>
+                <button type="submit" class="btn btn-sm rounded-0 btn-outline-primary">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="score" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabelScore">Оценки</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="GroupsScore" class="col-form-label">Группа :</label>
+                        <select class="custom-select custom-select-sm" id="GroupsScore" required>
+                            <option value="">CSSE 1815</option>
+                            <option value="">CSSE 1814</option>
+                            <option value="">CSSE 1813</option>
+                            <option value="">IS 1802</option>
+                            <option value="">IS 1801</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="GroupsScore" class="col-form-label">Задание :</label>
+                        <select class="custom-select custom-select-sm" id="TasksScore" required>
+                            <option value="">Socket</option>
+                            <option value="">Database</option>
+                            <option value="">Midterm</option>
+                            <option value="">Project</option>
+                            <option value="">Endterm</option>
+                        </select>
+                    </div>
+
+                    <table class="table mt-md-5">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Фамилия</th>
+                            <th scope="col">Имя</th>
+                            <th class="text-md-center" scope="col">Оценка</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Ахмешев</td>
+                            <td>Ринат</td>
+                            <td class="d-flex justify-content-center">
+                                <input type="text" class="form-control form-control-sm rounded-0 input_h23_w103" id="InputScore1" placeholder="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Муссин</td>
+                            <td>Муса</td>
+                            <td class="d-flex justify-content-center">
+                                <input type="text" class="form-control form-control-sm rounded-0 input_h23_w103" id="InputScore2" placeholder="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Амир</td>
+                            <td>Карина</td>
+                            <td class="d-flex justify-content-center">
+                                <input type="text" class="form-control form-control-sm rounded-0 input_h23_w103" id="InputScore3" placeholder="" required>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm rounded-0 btn-outline-secondary" data-dismiss="modal">Отмена</button>
+                <button type="submit" class="btn btn-sm rounded-0 btn-outline-primary">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+
+{%extends "DL_app/layout.html" %}
+
+{%block content%}
+<div class="row">
+    <div class="col-md-10">
+        <div class="card w-100 h-100 shadow-sm ">
+            <div class="card-header h5">
+                Студент
+            </div>
+            <div class="card-body">
+                <div class="float-md-left">
+                    <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                    <h6 class="card-subtitle text-muted">Имя</h6>
+                </div>
+                <div class="ml-md-5 float-md-left">
+                    <h5 class="card-title">{{user.user_group}}</h5>
+                    <h6 class="card-subtitle text-muted">Группа</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="card w-100 h-100 shadow-sm text-center">
+            <div class="card-header h5">
+                GPA
+            </div>
+            <div class="card-body">
+                <p class="card-text mt-md-2 h4">4</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card w-100 mt-md-3 mb-md-3 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title font-weight-bold">Курсы Семестра - 1 :</h4>
+        <h6 class="card-subtitle mb-md-4 font-weight-bold">2018/2019</h6>
+
+        {% for course in all_course %}
+        <div class="card w-100 mb-md-3">
+            <div class="card-body">
+                <h5 class="card-title">{{course.course_name}}</h5>
+                <h6 class="card-subtitle text-muted">Преподаватель <em>{{course.course_teacher}}</em></h6>
+                <hr>
+                <div class="float-left">
+                    <a href="#" class="card-link">Перейти к курсу</a>
+                </div>
+                <div class="float-right">
+                    <a href="{% url 'DL_app:student_scores' course.course_id%}" class="card-link">Оценки</a>
+                    <a href="{% url 'DL_app:student_attendance' course.course_id%}" class="card-link">Посещаемость</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock%}

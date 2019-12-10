@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efd9ac10-fcea-4905-8256-78a4942352c8" name="Default Changelist" comment="">
+    <list default="true" id="efd9ac10-fcea-4905-8256-78a4942352c8" name="Default Changelist" comment="Attendance and scores">
+      <change afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/teacher_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/attendance_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/attendance_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/courses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/score_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/score_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DL_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DL_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project_DL/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_DL/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,10 +37,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/DL_app/static/DL_app/css" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -53,15 +61,15 @@
       <recent name="D:\projects\python\django\Project_DL\DL_app\templates\registration" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -83,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575904985039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Attendance and scores">
+      <created>1575928469475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575928469475</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -104,7 +119,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/DjangoForStudents" />
+    </ignored-roots>
     <MESSAGE value="Authorization and easy page transition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Authorization and easy page transition" />
+    <MESSAGE value="Attendance and scores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attendance and scores" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="461" y="181" key="SettingsEditor" timestamp="1576002798143">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="181" key="SettingsEditor/0.0.1920.1080/-1280.64.1280.1024@0.0.1920.1080" timestamp="1576002798143" />
+    <state x="656" y="362" key="com.intellij.ide.util.TipDialog" timestamp="1576002771296">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="656" y="362" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1280.64.1280.1024@0.0.1920.1080" timestamp="1576002771296" />
   </component>
 </project>
