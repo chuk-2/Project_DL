@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd9ac10-fcea-4905-8256-78a4942352c8" name="Default Changelist" comment="Attendance and scores">
-      <change afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/teacher_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DL_app/migrations/0010_group_groupcourse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DL_app/migrations/0011_delete_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DL_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/courses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DL_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/templates/DL_app/teacher_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/DL_app/teacher_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DL_app/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DL_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DL_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_DL/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project_DL/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,9 +131,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="181" key="SettingsEditor/0.0.1920.1080/-1280.64.1280.1024@0.0.1920.1080" timestamp="1576002798143" />
-    <state x="656" y="362" key="com.intellij.ide.util.TipDialog" timestamp="1576002771296">
+    <state x="656" y="362" key="com.intellij.ide.util.TipDialog" timestamp="1576081547073">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="362" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1280.64.1280.1024@0.0.1920.1080" timestamp="1576002771296" />
+    <state x="656" y="362" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1280.64.1280.1024@0.0.1920.1080" timestamp="1576081547073" />
   </component>
 </project>

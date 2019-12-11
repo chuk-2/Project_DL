@@ -57,97 +57,93 @@
         </div>
     </div>
 {% else %}
-    <div class="row mt-md-3">
-        <div class="col-md-10">
-            <div class="card w-100 mb-md-3 shadow-sm ">
-                <div class="card-header h5">
-                    Преподаватель
-                </div>
+    <div class="card w-100 mb-md-3 shadow-sm ">
+        <div class="card-header h5">
+            Преподаватель
+        </div>
+        <div class="card-body">
+            <div class="float-md-left">
+                <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                <h6 class="card-subtitle text-muted">Имя</h6>
+            </div>
+            <div class="ml-md-5 float-md-left">
+                <h5 class="card-title">{{user.user_group}}</h5>
+                <h6 class="card-subtitle text-muted">Кафедра</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="card w-100 mb-md-3 shadow-sm">
+        <div class="card-body">
+            <h4 class="card-title font-weight-bold mb-md-3">Мои курсы :</h4>
+
+            <div class="card w-100 mb-md-3">
                 <div class="card-body">
-                    <div class="float-md-left">
-                        <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
-                        <h6 class="card-subtitle text-muted">Имя</h6>
+                    <h5 class="card-title">Теория Вероятности и Математическая Статистика</h5>
+                    <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
+                    <hr>
+                    <div class="float-left mt-md-1">
+                        <a href="#" class="card-link">Перейти к курсу</a>
                     </div>
-                    <div class="ml-md-5 float-md-left">
-                        <h5 class="card-title">{{user.user_group}}</h5>
-                        <h6 class="card-subtitle text-muted">Кафедра</h6>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
                     </div>
                 </div>
             </div>
-
-            <div class="card w-100 mb-md-3 shadow-sm">
+            <div class="card w-100 mb-md-3">
                 <div class="card-body">
-                    <h4 class="card-title font-weight-bold mb-md-3">Мои курсы :</h4>
-
-                    <div class="card w-100 mb-md-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Теория Вероятности и Математическая Статистика</h5>
-                            <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
-                            <hr>
-                            <div class="float-left mt-md-1">
-                                <a href="#" class="card-link">Перейти к курсу</a>
-                            </div>
-                            <div class="float-right">
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                            </div>
-                        </div>
+                    <h5 class="card-title">Дискретная Математика</h5>
+                    <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
+                    <hr>
+                    <div class="float-left">
+                        <a href="#" class="card-link">Перейти к курсу</a>
                     </div>
-                    <div class="card w-100 mb-md-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Дискретная Математика</h5>
-                            <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
-                            <hr>
-                            <div class="float-left">
-                                <a href="#" class="card-link">Перейти к курсу</a>
-                            </div>
-                            <div class="float-right">
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                            </div>
-                        </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
                     </div>
-                    <div class="card w-100 mb-md-3">
-                        <div class="card-body">
-                            <h5 class="card-title">C#</h5>
-                            <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
-                            <hr>
-                            <div class="float-left">
-                                <a href="#" class="card-link">Перейти к курсу</a>
-                            </div>
-                            <div class="float-right">
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="card w-100 mb-md-3">
+                <div class="card-body">
+                    <h5 class="card-title">C#</h5>
+                    <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
+                    <hr>
+                    <div class="float-left">
+                        <a href="#" class="card-link">Перейти к курсу</a>
                     </div>
-                    <div class="card w-100 mb-md-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Java</h5>
-                            <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
-                            <hr>
-                            <div class="float-left">
-                                <a href="#" class="card-link">Перейти к курсу</a>
-                            </div>
-                            <div class="float-right">
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                            </div>
-                        </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
                     </div>
-                    <div class="card w-100 mb-md-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Английский Язык</h5>
-                            <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
-                            <hr>
-                            <div class="float-left">
-                                <a href="#" class="card-link">Перейти к курсу</a>
-                            </div>
-                            <div class="float-right">
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                                <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="card w-100 mb-md-3">
+                <div class="card-body">
+                    <h5 class="card-title">Java</h5>
+                    <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
+                    <hr>
+                    <div class="float-left">
+                        <a href="#" class="card-link">Перейти к курсу</a>
+                    </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-100 mb-md-3">
+                <div class="card-body">
+                    <h5 class="card-title">Английский Язык</h5>
+                    <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
+                    <hr>
+                    <div class="float-left">
+                        <a href="#" class="card-link">Перейти к курсу</a>
+                    </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
+                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
                     </div>
                 </div>
             </div>

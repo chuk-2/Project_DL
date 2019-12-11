@@ -13,13 +13,36 @@ class SimpleUser(AbstractUser):
         return self.username
 
 
-class User(models.Model):
-    user_id = models.CharField(max_length=9999)
-    user_password = models.TextField(default='123456')
-    user_name = models.TextField()
-    user_surname = models.TextField()
-    user_date_of_birth = models.DateField('date of birth')
-    user_role = models.TextField()
+# class User(models.Model):
+#     user_id = models.CharField(max_length=9999)
+#     user_password = models.TextField(default='123456')
+#     user_name = models.TextField()
+#     user_surname = models.TextField()
+#     user_date_of_birth = models.DateField('date of birth')
+#     user_role = models.TextField()
+
+
+class Group(models.Model):
+    group_id = models.CharField(max_length=9999)
+    group_name = models.TextField()
+    group_curator = models.TextField()
+
+
+class Course(models.Model):
+    course_id = models.CharField(max_length=9999)
+    course_name = models.TextField()
+    course_teacher = models.TextField()
+
+
+class GroupCourse(models.Model):
+    group_id = models.TextField()
+    course_id = models.TextField()
+    semester = models.TextField()
+
+
+class TeacherCourses(models.Model):
+    teacher_id = models.TextField()
+    course_id = models.TextField()
 
 
 class News(models.Model):
@@ -31,14 +54,3 @@ class News(models.Model):
 
     def datemonth(self):
         return self.news_date.strftime('%d %B')
-
-
-class Course(models.Model):
-    course_id = models.CharField(max_length=9999)
-    course_name = models.TextField()
-    course_teacher = models.TextField()
-
-
-class TeacherCourses(models.Model):
-    teacher_id = models.TextField()
-    course_id = models.TextField()
