@@ -21,16 +21,18 @@ def courses(request):
     query = 'SELECT * FROM DL_app_Course'
     for user in SimpleUser.objects.raw('SELECT * FROM DL_app_SimpleUser WHERE username=%s', [username]):
         user_group = user.user_group
-    for group in Group.objects.raw('SELECT * FROM DL_app_Group WHERE group_name=%s', [user_group]):
-        group_id= group.group_id
-    for groupcourse in GroupCourse.objects.raw('SELECT * FROM DL_app_GroupCourse WHERE group_id=%s', [group_id]):
-        if i == 0:
-            query = query + ' WHERE'
-            query = query + ' course_id=' + groupcourse.course_id
-        else:
-            query = query + ' OR course_id=' + groupcourse.course_id
-        i = i + 1
-    print(query)
+    if user_group == "Student":
+        for group in Group.objects.raw('SELECT * FROM DL_app_Group WHERE group_name=%s', [user_group]):
+            group_id= group.group_id
+        for groupcourse in GroupCourse.objects.raw('SELECT * FROM DL_app_GroupCourse WHERE group_id=%s', [group_id]):
+            if i == 0:
+                query = query + ' WHERE'
+                query = query + ' course_id=' + groupcourse.course_id
+            else:
+                query = query + ' OR course_id=' + groupcourse.course_id
+            i = i + 1
+    elif user_group == "Teacher":
+        print('None')
     all_course = Course.objects.raw(query)
     #all_course = Course.objects.filter(course_id=1).order_by('-course_id')
     #if query:
