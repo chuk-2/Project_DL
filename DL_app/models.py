@@ -45,6 +45,36 @@ class TeacherCourses(models.Model):
     course_id = models.TextField()
 
 
+class Tasks(models.Model):
+    course_id = models.TextField()
+    task_name = models.TextField()
+    task_description = models.TextField()
+    task_files = models.FileField(upload_to='uploads/')
+    task_deadline = models.DateField()
+
+
+class UserTask(models.Model):
+    student_id = models.TextField()
+    task_id = models.TextField()
+    score = models.FloatField()
+    files = models.FileField()
+    time = models.DateField()
+
+
+class Schedule(models.Model):
+    schedule_id = models.TextField()
+    schedule_date = models.DateField()
+    course_id = models.TextField()
+    type = models.TextField()
+
+
+class UserSchedule(models.Model):
+    student_id = models.TextField()
+    schedule_id = models.TextField()
+    is_was = models.BooleanField()
+
+
+
 class News(models.Model):
     news_id = models.CharField(max_length=9999)
     news_author = models.TextField()

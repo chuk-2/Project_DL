@@ -77,9 +77,10 @@
         <div class="card-body">
             <h4 class="card-title font-weight-bold mb-md-3">Мои курсы :</h4>
 
+            {% for course in all_course %}
             <div class="card w-100 mb-md-3">
                 <div class="card-body">
-                    <h5 class="card-title">Теория Вероятности и Математическая Статистика</h5>
+                    <h5 class="card-title">{{course.course_name}}</h5>
                     <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
                     <hr>
                     <div class="float-left mt-md-1">
@@ -91,62 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card w-100 mb-md-3">
-                <div class="card-body">
-                    <h5 class="card-title">Дискретная Математика</h5>
-                    <h6 class="card-subtitle text-muted">Весенний семестр 2019</h6>
-                    <hr>
-                    <div class="float-left">
-                        <a href="#" class="card-link">Перейти к курсу</a>
-                    </div>
-                    <div class="float-right">
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-100 mb-md-3">
-                <div class="card-body">
-                    <h5 class="card-title">C#</h5>
-                    <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
-                    <hr>
-                    <div class="float-left">
-                        <a href="#" class="card-link">Перейти к курсу</a>
-                    </div>
-                    <div class="float-right">
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-100 mb-md-3">
-                <div class="card-body">
-                    <h5 class="card-title">Java</h5>
-                    <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
-                    <hr>
-                    <div class="float-left">
-                        <a href="#" class="card-link">Перейти к курсу</a>
-                    </div>
-                    <div class="float-right">
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card w-100 mb-md-3">
-                <div class="card-body">
-                    <h5 class="card-title">Английский Язык</h5>
-                    <h6 class="card-subtitle text-muted">Осенний семестр 2018</h6>
-                    <hr>
-                    <div class="float-left">
-                        <a href="#" class="card-link">Перейти к курсу</a>
-                    </div>
-                    <div class="float-right">
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#score" data-whatever="@mdo">Оценки</button>
-                        <button type="button" class="btn btn-sm rounded-0 btn-outline-primary" data-toggle="modal" data-target="#attendance" data-whatever="@mdo">Посещаемость</button>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import News, Course, TeacherCourses, SimpleUser, Group, GroupCourse
+from .models import News, Course,  SimpleUser, Group, GroupCourse, TeacherCourses
 
 
 # Register your models here.
