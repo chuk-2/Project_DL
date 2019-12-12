@@ -45,7 +45,7 @@
                     <h6 class="card-subtitle text-muted">Преподаватель <em>{{course.course_teacher}}</em></h6>
                     <hr>
                     <div class="float-left">
-                        <a href="#" class="card-link">Перейти к курсу</a>
+                        <a href="{% url 'DL_app:course_user' course.course_id%}" class="card-link">Перейти к курсу</a>
                     </div>
                     <div class="float-right">
                         <a href="{% url 'DL_app:student_scores' course.course_id%}" class="card-link">Оценки</a>

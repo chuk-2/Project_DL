@@ -1,6 +1,9 @@
+import os
+from django.conf import settings
 from django.shortcuts import render, get_object_or_404
 from .models import *
 from django.http import HttpResponse
+
 
 
 # Create your views here.
@@ -46,11 +49,18 @@ def courses(request):
                 query = query + ' OR course_id=' + groupcourse.course_id
             i = i + 1
     all_course = Course.objects.raw(query)
-    print(query)
-    #all_course = Course.objects.filter(course_id=1).order_by('-course_id')
-    #if query:
-    #    all_course = all_course.filter(pk=query)
     return render(request, "DL_app/courses.html", {'all_course': all_course})
+
+
+def course_user(request, course_id):
+    course_art = get_object_or_404(Course, pk=course_id)
+    all_tasks = Tasks.objects.filter(course_id=course_id)
+    return render(request, "DL_app/course_user.html", {"all_tasks": all_tasks, "course": course_art})
+
+
+def task_user(request, task_id):
+    task_art = get_object_or_404(Tasks, pk=task_id)
+    return render(request, "DL_app/task_user.html", {"tasks": task_art})
 
 
 def student_attendance(request, course_id):
@@ -61,3 +71,11 @@ def student_attendance(request, course_id):
 def student_scores(request, course_id):
     course_art = get_object_or_404(Course, pk=course_id)
     return render(request, "DL_app/score_student.html", {"course": course_art})
+
+def download(request, path):
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/octet-stream")
+            response['Content-Disposition'] = 'inline; filename' + os.path.basename(file_path)
+            return response

@@ -1,0 +1,26 @@
+{%extends "DL_app/layout.html" %}
+
+{%block content%}
+<div class="row mt-md-3">
+    <div class="col-md-10">
+        <div class="card w-100 mb-md-3 shadow-sm">
+            <div class="card-body">
+                <h4 class="card-title font-weight-bold mb-md-3">{{ course.course_name }} :</h4>
+
+                <div class="card w-100 mb-md-3">
+                    <div class="card-body">
+                        <ul>
+                            {% for task in all_tasks %}
+                            <li>
+                                <a class="text-decoration-none" href="{% url 'DL_app:task_user' task.task_id %}">{{ task.task_name }} </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

@@ -46,6 +46,7 @@ class TeacherCourses(models.Model):
 
 
 class Tasks(models.Model):
+    task_id = models.CharField(max_length=9999)
     course_id = models.TextField()
     task_name = models.TextField()
     task_description = models.TextField()
@@ -72,7 +73,6 @@ class UserSchedule(models.Model):
     student_id = models.TextField()
     schedule_id = models.TextField()
     is_was = models.BooleanField()
-
 
 
 class News(models.Model):

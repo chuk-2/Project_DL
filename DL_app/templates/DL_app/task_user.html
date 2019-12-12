@@ -1,0 +1,37 @@
+{%extends "DL_app/layout.html" %}
+
+{%block content%}
+        <div class="col-md-10">
+            <div class="card w-100 mb-md-3 shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold mb-md-3">Задание :</h4>
+
+                    <div class="card w-100 mb-md-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{tasks.task_name}}</h5>
+                            <h6 class="card-subtitle text-muted mb-md-3">Срок сдачи : {{tasks.task_deadline}}</h6>
+                            <p class="card-text">{{tasks.task_description}}</p>
+                            <p class="card-text">When you submit your work, please click on 'submit for the check' button.</p>
+                            <a class="card-text" href="{{tasks.task_files.url}}">Скачать</a>
+                            <hr>
+                            <form>
+                                <div class="form-group w-50">
+                                    <div class="custom-file form-control-sm">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Выберите файл</label>
+                                        <small id="customFileHelpBlock" class="form-text text-muted">
+                                            Файл должен быть расширения : .docx, .py, .java, или .zip
+                                        </small>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-sm rounded-0 btn-outline-primary">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{%endblock%}
